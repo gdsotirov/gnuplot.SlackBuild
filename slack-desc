@@ -1,0 +1,12 @@
+gnuplot: Gnuplot (An Interactive Plotting Program)
+gnuplot:
+gnuplot: Gnuplot is a portable command-line driven interactive data and
+gnuplot: function plotting utility for many platforms. It was originally
+gnuplot: intended as to allow scientists and students to visualize math
+gnuplot: functions and data. It does this job pretty well, but has grown
+gnuplot: to support many non-interactive uses, including web scripting and
+gnuplot: integration as a plotting engine for third-party applications
+gnuplot: like Octave. Gnuplot has been supported and under development
+gnuplot: since 1986.
+gnuplot:
+gnuplot: Packaged by Georgi D. Sotirov <gdsotirov@dir.bg>
