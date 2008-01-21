@@ -1,0 +1,7 @@
+gd >= 2.0.35
+libpng >= 1.2.23
+ncurses >= 5.6
+readline >= 5.2
+sdl >= 1.2.11
+wxwidgets >= 2.8.7
+zlib >= 1.2.3
