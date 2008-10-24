@@ -8,7 +8,7 @@
 . /etc/slack-package.conf
 
 NAME=gnuplot
-VERSION=4.2.2
+VERSION=4.2.4
 BUILD=1
 ARCH=${ARCH:-i486}
 
@@ -49,16 +49,18 @@ CXXFLAGS=$SLKCFLAGS \
             --datadir=/usr/share/gnuplot \
             --with-gd \
             --with-png \
-            --with-readline=builtin
+            --with-readline=gnu \
+            --with-linux-vga \
+            --with-x
 
-make || exit 1
+make -j4 || exit 1
 make DESTDIR=$PKG install || exit 2
-
 
 bin_perms $PKG
 ( cd $PKG; strip_bin )
-DOCFILES="$DOCFILES CodeStyle Copyright PORTING PATCHLEVEL VERSION"
+DOCFILES="$DOCFILES CodeStyle Copyright PATCHLEVEL PGPKEYS PORTING VERSION"
 ( cd $SRC; create_docs $PKG $NAME-$VERSION )
+( cd $PKG/usr/doc/$NAME-$VERSION; cp Copyright COPYING )
 # Install demo
 cp -a $SRC/demo $PKG/usr/doc/$NAME-$VERSION
 rm -f $PKG/usr/doc/$NAME-$VERSION/demo/Make*
