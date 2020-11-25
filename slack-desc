@@ -9,4 +9,4 @@ gnuplot: integration as a plotting engine for third-party applications
 gnuplot: like Octave. Gnuplot has been supported and under development
 gnuplot: since 1986.
 gnuplot:
-gnuplot: Packaged by Georgi D. Sotirov <gdsotirov@dir.bg>
+gnuplot: Packaged by Georgi D. Sotirov <gdsotirov@gmail.com>
